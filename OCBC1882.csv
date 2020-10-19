@@ -1,0 +1,7 @@
+﻿Saxo Trade Number,V1 Goal ID,Sub Account Number,Trade/Transaction,Narration,As Of,Activity Type,Activity Subtype,Amount,Transaction Currency,Instrument WI Code,Units,Unit Price,Trade Currency,Fx Rate,Settlement Currency,Deduced
+PAYOUTPF464646,,39988/32346600,transaction,Funds paid-out towards Withdrawal Request,2020-03-04 00:00:00 UTC,funds_out,withdrawal,-3583.95,SGD,,,,,,SGD,TRUE
+PAYOUTPF464646,,CASH/16871,transaction,Intra-Account Transfer,2020-03-04 00:00:00 UTC,funds_in,intra_transfers,3583.95,SGD,,,,,,SGD,TRUE
+PAYOUTPF464646,,CASH/16871,transaction,Funds paid-out towards Withdrawal Request,2020-03-04 00:00:00 UTC,payout,withdrawal,-3583.95,SGD,,,,,,SGD,TRUE
+,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
