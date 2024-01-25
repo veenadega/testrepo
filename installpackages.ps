@@ -6,7 +6,8 @@ choco install python3 -y
 
 # Add Python and Scripts directories to the PATH
 $pythonPath = Get-Command python | ForEach-Object { $_.Source }
-[Environment]::SetEnvironmentVariable("Path", "$env:Path;$pythonPath", [EnvironmentVariableTarget]::Machine)
+$pythonScriptsPath = Join-Path $pythonPath "Scripts"
+[Environment]::SetEnvironmentVariable("Path", "$env:Path;$pythonPath;$pythonScriptsPath", [EnvironmentVariableTarget]::Machine)
 
 # Refresh the environment variables
 $env:Path = [System.Environment]::GetEnvironmentVariable("Path", [System.EnvironmentVariableTarget]::Machine)
