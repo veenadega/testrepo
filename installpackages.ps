@@ -1,6 +1,10 @@
 # Install Chocolatey (a package manager for Windows)
 Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
 
+# Add Chocolatey Binaries Directory to PATH
+$chocolateyBinPath = 'C:\ProgramData\chocolatey\bin'
+[Environment]::SetEnvironmentVariable("Path", "$env:Path;$chocolateyBinPath", [EnvironmentVariableTarget]::Machine)
+
 # Install Python using Chocolatey
 choco install python3 -y
 
