@@ -1,15 +1,28 @@
-#Install Chocolatey (a package manager for Windows)
+# Install Chocolatey (a package manager for Windows)
 Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
 
-#Install Python using Chocolatey
+# Install Python using Chocolatey
 choco install python3 -y
 
-#Add Python and Scripts directories to the PATH
+# Add Python and Scripts directories to the PATH
 $pythonPath = Get-Command python | ForEach-Object { $_.Source }
 [Environment]::SetEnvironmentVariable("Path", "$env:Path;$pythonPath", [EnvironmentVariableTarget]::Machine)
 
-#Refresh the environment variables
+# Refresh the environment variables
 $env:Path = [System.Environment]::GetEnvironmentVariable("Path", [System.EnvironmentVariableTarget]::Machine)
 
-#Install Flask using pip
+# Install Flask using pip
 pip install Flask
+
+# Check if Python and Flask are installed
+if (python --version -like '*Python*') {
+    echo "Python is installed successfully."
+} else {
+    echo "Failed to install Python."
+}
+
+if (pip show Flask) {
+    echo "Flask is installed successfully."
+} else {
+    echo "Failed to install Flask."
+}
